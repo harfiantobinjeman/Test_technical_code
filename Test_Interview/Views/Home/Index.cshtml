@@ -3,9 +3,39 @@
 }
 
 <div class="text-center" style="display:grid">
-    <input />
-    <button>Generate Segitiga</button>
-    <button>Generate Bilangan Ganjil</button>
-    <button>Generate Bilangan Prima</button>
-    <h3>Result</h3>
+    <input  id="input"/>
+    <button onclick="Segitiga()">Generate Segitiga</button>
+    <button onclick="Ganjil()">Generate Bilangan Ganjil</button>
+    <button onclick="Prima()">Generate Bilangan Prima</button>
+    <h3>Result : <h6 id="hasil"></h6></h3>
+
 </div>
+<script>
+    function Segitiga(){
+        var a = document.getElementById("input").value;
+        var b = a.split("");
+        var c = "0"
+        var tampung = ""
+        for(let i = 0;i <= b.length-1;i++){
+            for (let j = 0; j <= b.length; j++) {
+                $('#hasil').append( b[i])
+                tampung += c
+                $('#hasil').append(tampung +"<p> " + "</p>")
+                break
+            }
+
+        }
+    }
+    function Ganjil(){
+        var a = document.getElementById("input").value;
+        for(let i = 0; i<= a; i++){
+            if(i%2==1){
+                $('#hasil').append(i+" ")
+            }
+        }
+    }
+    function Prima(){
+        var a = document.getElementById("input").value;
+        
+    }
+</script>
